@@ -104,5 +104,3 @@ Questo progetto è pronto per il deploy su Vercel (consigliato) o su qualsiasi p
 - [EmailJS](https://www.emailjs.com/docs/)
 
 ---
-
-> 🎉 Buon lavoro! Modifica i contenuti e i componenti per personalizzare il tuo portfolio.
