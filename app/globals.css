@@ -1,26 +1,103 @@
 @import "tailwindcss";
 
+/* Serve per importare le direttive di Tailwind CSS e applicare i suoi stili globali. Inoltre, definisce alcune variabili CSS personalizzate per i colori e gli stili del tema, che possono essere utilizzate in tutto il progetto per mantenere coerenza visiva: */
+@theme {
+  --color-background: #1e1e1e;
+  --color-foreground: #ffffff;
+  --color-foreground-muted: #ffffff80;
+  --color-accent-green: #9bffb0;
+  --color-accent-blue: #20fcf9;
+}
+
+/* Sono le variabili CSS che definiscono i colori principali del tema del sito. Queste variabili possono essere utilizzate in tutto il progetto per mantenere coerenza visiva e facilitare la gestione dei colori. Ad esempio, è possibile utilizzare var(--color-background) per impostare lo sfondo di un elemento, var(--color-foreground) per il colore del testo principale, e così via. */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --background: #1e1e1e;
+  --foreground: #ffffff;
+  --foreground-muted: #ffffff80;
+  --accent-green: #9bffb0;
+  --accent-blue: #20fcf9;
 }
 
 body {
-  background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--background);
+  font-family: var(--font-ibm-plex-sans);
+}
+
+.font-text {
+  color: var(--foreground-muted);
+  font-family: var(--font-ibm-plex-sans);
+}
+
+.font-title {
+  font-family: var(--font-ibm-plex-sans-condensed);
+  font-weight: 500;
+}
+
+.title-gradient {
+  background: linear-gradient(90deg, var(--accent-green), var(--accent-blue));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: var(--font-ibm-plex-sans-condensed);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.cta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--accent-green);
+  color: var(--background);
+  font-family: var(--font-ibm-plex-sans-condensed);
+  font-weight: 500;
+  border-radius: 64px;
+  padding: 0.75rem 1.5rem;
+  overflow: hidden;
+}
+
+/* Animazione spinner clessidra invio messaggio sul form di contatto */
+.spinner {
+  display: inline-block;
+  /* Di seguito uno shorthand per:
+  animation-name: spin;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite; */
+  animation: spin 1s linear infinite;
+  /* Significa:
+  usa l’animazione chiamata spin 
+  dura 1 secondo 
+  velocità costante (linear) 
+  si ripete all’infinito */
+  margin-left: 5px;
+  /* Spazio tra il testo "Invio in corso..." e l'icona della clessidra */
+}
+
+/* definisce come cambia lo stato nel tempo:
+0%: l'elemento è nella sua posizione iniziale (stato iniziale: rotazione a 0 gradi, nessuna rotazione).
+100%: l'elemento ha completato una rotazione completa (stato finale: 360 gradi, giro completo).
+Cosa succede insieme:
+1. Parte da 0° 
+2. Ruota fino a 360° in 1 secondo 
+3. Ricomincia da capo 
+4. Loop infinito 
+Risultato: rotazione continua */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Personalizzazione dell'altezza della visibilità del testo e della comparsa di eventuale scrollbar verticale: */
+.custom-description {
+  overflow-y: auto;
+  overflow-x: hidden;
+  max-height: 180px;
+  white-space: normal;
+  /* testo va a capo automaticamente (default) */
 }
