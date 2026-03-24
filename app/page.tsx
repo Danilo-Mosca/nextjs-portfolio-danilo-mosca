@@ -23,7 +23,9 @@ export default function Home() {
       {/* Sezione Hero */}
       {/* min-h-svh = Altezza minima in Small Viewport Height (con barre browser visibili). Applica la proprietà CSS min-height: 100svh; all'elemento <section></section> così da non visualizzare l'immagine del portofolio subito in alto */}
       <section id="hero" className="flex flex-col justify-center items-center space-y-6 min-h-svh py-24">
-        <Image src={ProfilePicture} alt="Danilo Mosca" width={200} height={200} className="size-[200] object-cover rounded-full" />
+        <div className="relative p-1 rounded-full bg-gradient-to-r from-accent-green to-accent-blue shadow-[0_0_30px_rgba(32,252,249,0.3)]">
+          <Image src={ProfilePicture} alt="Danilo Mosca" width={200} height={200} className="size-[200px] object-cover rounded-full border-4 border-background" />
+        </div>
         <div className="max-w-2xl space-y-6">
           <h1 className="font-title text-center md:text-3xl lg:text-4xl">Ciao 👋, sono Danilo Mosca</h1>
           <h2 className="title-gradient text-center text-4xl lg:text-6xl">Full Stack Developer</h2>
@@ -84,7 +86,7 @@ export default function Home() {
             {WORKFLOW.map((slide, index) => (
               <div key={index} className={index === WORKFLOW.length - 1 ? "lg:col-start-2" : ""}>
                 {/* Oppure solo className="last:lg:col-start-2" */}
-                <Slide key={index} title={slide.title} description={slide.description} icon={<slide.icon size={30}/>} />
+                <Slide key={index} title={slide.title} description={slide.description} icon={<slide.icon size={30} />} />
               </div>
             ))}
           </div>
@@ -96,18 +98,9 @@ export default function Home() {
       <section id="contacts" className="flex flex-col justify-center items-center space-y-6 pb-24 lg:pb-48">
         <div className="space-y-6">
           <h2 className="font-title text-center text-4xl">Mettiamoci in contatto 📲</h2>
-            <ContactForm />
+          <ContactForm />
         </div>
       </section>
-
-      {/* Footer */}
-      <footer className="flex flex-col justify-center items-center space-y-4 pt-20 pb-10 mt-10">
-        <p className="font-text text-sm">&copy; {new Date().getFullYear()} Danilo Mosca. Tutti i diritti riservati.</p>
-        <div className="flex space-x-4">
-          <Link href="https://www.linkedin.com/in/danilo-mosca-706564374/" target="_blank" className="text-sm text-accent-blue hover:text-accent-green transition-colors">LinkedIn</Link>
-          <Link href="https://github.com/danilo-mosca" target="_blank" className="text-sm text-accent-blue hover:text-accent-green transition-colors">GitHub</Link>
-        </div>
-      </footer>
 
     </main >
   );

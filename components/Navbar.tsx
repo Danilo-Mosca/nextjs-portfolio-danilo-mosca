@@ -8,7 +8,7 @@ export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);    // Stato React per aprire/chiudere il menu (controlla se il menu è aperto o chiuso)
 
     return (
-        <nav className="fixed top-0 w-full z-10 bg-[#151515] shadow-md shadow-background">
+        <nav className="fixed top-0 w-full z-10 bg-background/80 backdrop-blur-md shadow-md shadow-background/50 border-b border-foreground/10">
             <div className="max-w-3xl mx-auto flex justify-between items-center p-4">
 
                 {/* Logo */}
@@ -62,7 +62,8 @@ export default function Navbar() {
                 */
                 className={`lg:hidden overflow-hidden transition-all duration-300 ease-in-out ${isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"}`}
             >
-                <div className="flex flex-col items-center gap-4 pb-4 bg-[#151515]">
+                {/* Rimosso il bg e il bordo discordante nel menu a discesa per creare una continuità totale con la barra superiore */}
+                <div className="flex flex-col items-center gap-4 py-4 bg-transparent border-t border-foreground/5">
                     <Link href="#about" onClick={() => setIsOpen(false)} className="hover:text-accent-green transition-all duration-300 transform hover:scale-110">About</Link>
                     <Link href="#skills" onClick={() => setIsOpen(false)} className="hover:text-accent-green transition-all duration-300 transform hover:scale-110">Skills</Link>
                     <Link href="#projects" onClick={() => setIsOpen(false)} className="hover:text-accent-green transition-all duration-300 transform hover:scale-110">Projects</Link>

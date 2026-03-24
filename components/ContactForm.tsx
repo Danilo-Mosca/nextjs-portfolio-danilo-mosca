@@ -1,7 +1,7 @@
 "use client";
 import React, { use, useRef, useState } from "react";
 import emailjs from '@emailjs/browser';    // importo emailjs, una libreria che consente di inviare email direttamente dal client utilizzando i servizi di EmailJS.
-import { MessageSquareCheck } from 'lucide-react';    // importo le icone MessageSquareCheck da lucide-react, che è una libreria di icone SVG per React.
+import { MessageSquareCheck, Loader2 } from 'lucide-react';    // importo le icone MessageSquareCheck da lucide-react, che è una libreria di icone SVG per React.
 
 function ContactForm() {
 
@@ -94,27 +94,27 @@ function ContactForm() {
                 <label htmlFor="name" className="font-title text-sm text-accent-blue hover:text-accent-green">
                     Il tuo nome:
                 </label>
-                <input type="text" id="name" name="name" className="font-text p-2 border-2 bg-transparent !text-foreground border-accent-blue hover:border-accent-green rounded-2xl" placeholder="Inserisci il tuo nome" required />
+                <input type="text" id="name" name="name" className="font-text p-2 border-2 bg-transparent !text-foreground border-accent-blue hover:border-accent-green focus:outline-none focus:ring-2 focus:ring-accent-green focus:border-transparent rounded-2xl transition-all" placeholder="Inserisci il tuo nome" required />
             </div>
 
             <div className="flex flex-col gap-2">
                 <label htmlFor="email" className="font-title text-sm text-accent-blue hover:text-accent-green">
                     La tua email:
                 </label>
-                <input type="email" id="email" name="email" className="font-text p-2 border-2 bg-transparent !text-foreground border-accent-blue hover:border-accent-green rounded-2xl" placeholder="Inserisci la tua email" required />
+                <input type="email" id="email" name="email" className="font-text p-2 border-2 bg-transparent !text-foreground border-accent-blue hover:border-accent-green focus:outline-none focus:ring-2 focus:ring-accent-green focus:border-transparent rounded-2xl transition-all" placeholder="Inserisci la tua email" required />
             </div>
 
             <div className="flex flex-col gap-2">
                 <label htmlFor="message" className="font-title text-sm text-accent-blue hover:text-accent-green">
                     Il tuo messaggio:
                 </label>
-                <textarea id="message" name="message" rows={4} className="font-text p-2 border-2 bg-transparent !text-foreground border-accent-blue hover:border-accent-green rounded-2xl" placeholder="Inserisci il tuo messaggio" required />
+                <textarea id="message" name="message" rows={4} className="font-text p-2 border-2 bg-transparent !text-foreground border-accent-blue hover:border-accent-green focus:outline-none focus:ring-2 focus:ring-accent-green focus:border-transparent rounded-2xl transition-all" placeholder="Inserisci il tuo messaggio" required />
             </div>
 
             {/* Con disabled={loading} disabilito il pulsante di invio del form durante l'invio dell'email, in modo da evitare invii multipli accidentali. Quando loading è true, il pulsante sarà disabilitato e mostrerà "Invio in corso..." invece di "Invia il messaggio". */}
-            <button type="submit" className="cta w-full cursor-pointer transition-transform transform hover:scale-105" disabled={loading}>
+            <button type="submit" className="cta w-full cursor-pointer transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_0_15px_rgba(155,255,176,0.5)] disabled:opacity-70 disabled:hover:translate-y-0 disabled:hover:shadow-none" disabled={loading}>
                 {loading ? (
-                    <span>Invio in corso...<span className="spinner">⏳</span></span>
+                    <span className="flex items-center">Invio in corso...<Loader2 className="w-5 h-5 ml-2 animate-spin" /></span>
                 ) : (
                     <span className="flex">Invia il messaggio<span><MessageSquareCheck className="w-6 h-6 ml-2" /></span></span>
                 )}

@@ -13,7 +13,7 @@ interface CardProps {
 
 function Card({ title, description, imageUrl, link }: CardProps) {
     return (
-        <div className="flex flex-col bg-foreground text-background rounded-2xl max-w-[280px] overflow-hidden">
+        <div className="flex flex-col bg-foreground text-background rounded-2xl max-w-[280px] overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-accent-blue/20">
             {/* Imposto l'immagine responsive: */}
             <Image src={imageUrl}
                 className="object-cover w-full h-[150px] rounded-2xl p-1"

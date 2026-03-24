@@ -13,7 +13,7 @@ interface CtaProps {
 function Cta({ label, link, target = "_self", className, icon }: CtaProps) {
     return (
         <>
-            <Link href={link} target={target} className={`cta text-xl transition-transform transform hover:scale-105 ${className ?? ""}`}>
+            <Link href={link} target={target} className={`cta text-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-[0_0_15px_rgba(155,255,176,0.5)] ${className ?? ""}`}>
                 <span>{label}</span>
                 {icon && <span className="ml-2">{icon}</span>}
             </Link>
