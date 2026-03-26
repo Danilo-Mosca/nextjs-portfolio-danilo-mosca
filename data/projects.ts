@@ -13,7 +13,7 @@ interface ISProject {
 
 export const PROJECTS: ISProject[] = [
     {
-        title: "Meteo Web App",
+        title: "Bool B&B",
         description: "Web App full-stack per la gestione di annunci immobiliari in affitto, progettata con architettura REST e interfaccia Single Page Application. Il backend è stato sviluppato con Node.js ed Express, con implementazione di API REST per la gestione di immobili, recensioni e like, includendo validazione server-side e gestione strutturata delle risorse. Il frontend, realizzato in React, offre un’esperienza fluida grazie alla navigazione client-side senza refresh. Tra le principali funzionalità: sistema di ricerca avanzata con filtri dinamici, pagine di dettaglio con integrazione di geolocalizzazione tramite API OpenStreetMap, interazioni utente (recensioni e like), invio di email ai proprietari tramite EmailJS. L’applicazione è completamente responsive ed è stata sviluppata ponendo particolare attenzione a UX, performance e gestione delle validazioni sia lato client che lato server.",
 
         // Non posso importare l'immagine in questo modo:
@@ -32,7 +32,7 @@ export const PROJECTS: ISProject[] = [
         link: "https://github.com/danilo-mosca"
     },
     {
-        title: "Weather App",
+        title: "Meteo Web App",
         description: "Web App frontend realizzata in JavaScript Vanilla per la visualizzazione delle previsioni meteo in tempo reale. L’app integra l’API OpenWeatherMap per recuperare dati aggiornati e offre due modalità di ricerca: inserimento manuale del nome della città, utilizzo della geolocalizzazione del device per ottenere le previsioni del luogo corrente. L’interfaccia è semplice e intuitiva, ottimizzata per fornire informazioni immediate sull’andamento meteorologico, con aggiornamento dinamico dei dati.",
         imageUrl: Meteo,
         link: "https://capable-parfait-152de6.netlify.app/"
