@@ -29,10 +29,10 @@ export default function Home() {
         <div className="max-w-2xl space-y-6">
           <h1 className="font-title text-center md:text-3xl lg:text-4xl">Ciao 👋, sono Danilo Mosca</h1>
           <h2 className="title-gradient text-center text-4xl lg:text-6xl">Full Stack Developer</h2>
-          <p className="font-text text-center text-xl">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit quia provident magni debitis expedita neque reprehenderit dicta, libero dolores soluta velit atque perspiciatis vel ab dolore iure accusamus aliquam voluptate. Rerum dolor asperiores saepe adipisci, soluta quia consequuntur. Nihil aliquid consectetur excepturi nostrum facilis perferendis, tempora ullam mollitia officiis minima.</p>
+          <p className="font-text text-center text-xl">💻 Sono uno sviluppatore web con una solida formazione pratica e una forte passione per la creazione di applicazioni moderne e performanti. Ho esperienza nello sviluppo frontend e backend, utilizzando tecnologie come React, Laravel e Java per realizzare progetti completi e scalabili. </p>
           <div className="flex flex-col md:flex-row justify-center items-center gap-4">
-            <Cta label="Contattami" link="#contact" icon={<MessageSquareCheck />} />
-            <Cta label="Download CV" link="https://www.google.it" target="_blank" icon={<Download />} />
+            <Cta label="Contattami" link="#contacts" icon={<MessageSquareCheck />} />
+            <Cta label="Download CV" link="./CV_Danilo-Mosca.pdf" target="_blank" icon={<Download />} />
           </div>
         </div>
       </section>
@@ -41,10 +41,11 @@ export default function Home() {
       <section id="about" className="flex flex-col justify-center items-center space-y-6 pb-24 lg:pb-48">
         <div className="max-w-2xl space-y-6">
           <h2 className="font-title text-center text-4xl">Di più su di me 🔮</h2>
-          <p className="font-text text-xl">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus vitae quibusdam doloribus repellendus saepe error provident illo repudiandae maiores adipisci explicabo ex totam non dolorum, blanditiis incidunt suscipit inventore, tempore architecto! Mollitia eveniet maxime aliquid pariatur rerum non soluta? Facere, beatae ipsam quo nemo minima similique, dolores dolorum voluptatem ab, esse error eius? Distinctio nihil hic numquam ratione eos doloribus nobis sed odit praesentium blanditiis adipisci saepe error eius repellat.
+          <p className="font-text text-xl text-center">
+            Mi piace lavorare su interfacce intuitive e allo stesso tempo costruire logiche backend robuste, curando sia l’esperienza utente che la qualità del codice. Attualmente sto ampliando le mie competenze a 360° in ambito informatico, approfondendo nuove tecnologie e consolidando le mie capacità nello sviluppo web.
             <br /><br />
-            Veritatis fugiat repudiandae dolore quasi magnam! Rerum laboriosam amet quia ullam deleniti nulla veniam impedit neque temporibus ipsum. Unde doloremque in vitae quibusdam ipsum, enim eveniet labore aliquam. A, rerum.
+            Sono una persona curiosa, orientata al miglioramento continuo e sempre pronta a mettersi alla prova con nuove sfide.<br /><br />
+            Obiettivo? Migliorare ogni giorno e creare progetti che facciano davvero la differenza.
           </p>
         </div>
       </section>

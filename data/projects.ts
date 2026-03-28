@@ -23,13 +23,13 @@ export const PROJECTS: ISProject[] = [
         // imageUrl: "../assets/images/BoolBnB-Platforms.webp",
         // Devo fare:
         imageUrl: BoolBnB,
-        link: "https://github.com/danilo-mosca"
+        link: "https://github.com/Danilo-Mosca/bool-bnb-team4"
     },
     {
         title: "Laravel Movies",
         description: "Web App full-stack a tema cinema con separazione tra area amministrativa e interfaccia pubblica. Il backend è stato sviluppato in Laravel, con implementazione di un sistema di autenticazione tramite Laravel Breeze e gestione completa delle operazioni CRUD per le entità film, accessibili esclusivamente agli utenti autenticati tramite backoffice. Il frontend, realizzato in React, è pensato per utenti non autenticati e offre le seguenti funzionalità: visualizzazione del catalogo film, sistema di ricerca e filtraggio, pagine di dettaglio con informazioni complete e strutturate. L’applicazione è progettata per garantire una chiara separazione dei ruoli, una navigazione intuitiva e una presentazione efficace dei contenuti.",
         imageUrl: LaravelMovies,
-        link: "https://github.com/danilo-mosca"
+        link: "https://github.com/Danilo-Mosca/movies-backoffice"
     },
     {
         title: "Meteo Web App",

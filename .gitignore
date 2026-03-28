@@ -39,3 +39,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# pdf del mio Curriculum Vitae
+/public/CV_Danilo-Mosca.pdf
